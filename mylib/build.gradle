@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'testMaven'
+    bintrayName = 'mylib'
+
+    publishedGroupId = 'com.hgDendi'
+    libraryName = 'MyLib'
+    artifact = 'mylib'
+
+    libraryDescription = 'lib test demo'
+
+    siteUrl = 'https://github.com/hgDendi/AndroidJCenterDemo'
+    gitUrl = 'https://github.com/hgDendi/AndroidJCenterDemo.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'dendi'
+    developerName = 'Dendi Chan'
+    developerEmail = 'hg.dendi@gmail.com'
+
+    licenseName = 'The MIT License'
+    licenseUrl = 'https://rem.mit-license.org'
+    allLicenses = ["MIT"]
+}
+
 android {
     compileSdkVersion 26
 
@@ -32,3 +56,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/hgDendi/AndroidJCenterDemo/master/bintray.gradle'
+apply from: 'https://raw.githubusercontent.com/hgDendi/AndroidJCenterDemo/master/maveninstall.gradle'
